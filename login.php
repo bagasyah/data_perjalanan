@@ -36,24 +36,40 @@ mysqli_close($conn);
 
 <head>
     <title>Login Pengguna</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div class="container mt-4">
+    <div class="login-box">
+
         <h2>Login Pengguna</h2>
+        <center>
+            <button onclick="toggle()">
+                light Mode 🔦
+            </button>
+        </center>
+
         <form method="POST" action="login.php">
-            <div class="form-group">
-                <label for="username">Username</label>
+            <div class="user-box">
                 <input type="text" class="form-control" name="username" id="username" required>
+                <label for="username">Username</label>
+
             </div>
-            <div class="form-group">
-                <label for="password">Password</label>
+            <div class="user-box">
                 <input type="password" class="form-control" name="password" id="password" required>
+                <label for="password">Password</label>
             </div>
-            <button type="submit" class="btn btn-primary">Login</button>
+
+            <div class="button-form">
+                <button id="submit" type="submit" class="btn btn-primary">Login</button>
+                <div id="register">
+                    Dont have an account ?
+                    <a href="#"> Register</a>
+                </div>
+            </div>
         </form>
     </div>
+    <script src="java.js"></script>
 </body>
 
 </html>
