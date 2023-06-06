@@ -64,7 +64,7 @@ mysqli_close($conn);
                 <button id="submit" type="submit" class="btn btn-primary">Login</button>
                 <div id="register">
                     Dont have an account ?
-                    <a href="#"> Register</a>
+                    <a href="register.php"> Register</a>
                 </div>
             </div>
         </form>
