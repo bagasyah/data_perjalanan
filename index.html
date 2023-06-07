@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Halaman Registrasi</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* CSS khusus untuk halaman registrasi */
+.container {
+  max-width: 400px;
+  margin-top: 50px;
+}
+
+.form-label {
+  font-weight: bold;
+}
+
+.btn-primary {
+  width: 100%;
+}
+
+/* Posisi tombol Daftar di tengah */
+button[type="submit"] {
+  margin-top: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Halaman Registrasi</h1>
+        <form>
+            <form>
+                <div class="mb-3">
+                    <label for="nama" class="form-label">Nama</label>
+                    <input type="text" class="form-control" id="nama" placeholder="Masukkan Nama Anda">
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Masukkan Email Anda">
+                </div>
+                <div class="mb-3">
+                    <label for="password" class="form-label">Kata Sandi</label>
+                    <input type="password" class="form-control" id="password" placeholder="Masukkan Kata Sandi">
+                </div>
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Konfirmasi Kata Sandi</label>
+                    <input type="password" class="form-control" id="confirmPassword"
+                        placeholder="Masukkan Konfirmasi Kata Sandi">
+                </div>
+                <button type="submit" class="btn btn-primary">Daftar</button>
+            </form>
+    </div>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

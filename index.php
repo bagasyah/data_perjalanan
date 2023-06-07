@@ -16,6 +16,28 @@ if (!isset($_SESSION['username'])) {
 <head>
     <title>Laporan Daftar Perjalanan</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #131315;
+            /* Ganti dengan warna latar belakang yang Anda inginkan */
+        }
+
+        .table {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            width: 1600px;
+            padding: 40px;
+            transform: translate(-50%, -50%);
+            color : white;
+            background: #2d2632;
+            box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
+            border-radius: 10px;
+        }
+        h2 {
+            color : white;
+        }
+    </style>
 </head>
 
 <body>

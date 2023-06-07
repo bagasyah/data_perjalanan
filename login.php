@@ -51,12 +51,12 @@ mysqli_close($conn);
 
         <form method="POST" action="login.php">
             <div class="user-box">
-                <input type="text" class="form-control" name="username" id="username" required>
+                <input type="text" class="form-control" name="username" id="username" style="color: white;" required>
                 <label for="username">Username</label>
 
             </div>
             <div class="user-box">
-                <input type="password" class="form-control" name="password" id="password" required>
+                <input type="password" class="form-control" name="password" id="password" style="color: white;" required>
                 <label for="password">Password</label>
             </div>
 

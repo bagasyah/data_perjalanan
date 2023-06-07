@@ -69,7 +69,7 @@ button {
     width: 100%;
     padding: 10px 0;
     font-size: 16px;
-    color: black;
+    color: rgb(0, 0, 0);
     margin-bottom: 30px;
     border: none;
     border-bottom: 1px solid var(--warnaketiga);
@@ -94,6 +94,14 @@ button {
     left: 0;
     color: var(--warnakedua);
     font-size: 12px;
+}
+
+#username{
+    color :var(--warnaketiga);
+}
+
+#password{
+    color :var(--warnaketiga);
 }
 
 #submit {
