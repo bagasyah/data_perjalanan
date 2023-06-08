@@ -23,19 +23,20 @@ if (!isset($_SESSION['username'])) {
         }
 
         .table {
-            position: absolute;
-            top: 30%;
-            left: 50%;
-            width: 1600px;
+            width: 1650px;
             padding: 40px;
-            transform: translate(-50%, -50%);
-            color : white;
+            color: white;
             background: #2d2632;
             box-shadow: 0 15px 25px rgba(143, 124, 236, 0.7);
             border-radius: 10px;
         }
+
         h2 {
-            color : white;
+            color: white;
+        }
+
+        a{
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -50,10 +51,11 @@ if (!isset($_SESSION['username'])) {
                 <div class="form-group  mr-auto">
                     <input type="text" name="keyword" class="form-control" placeholder="Cari...">
                 </div>
-
+                
                 <a href="logout.php" class="btn btn-danger">Logout</a>
 
             </form>
+            <a href="add.php" class="btn btn-success">Tambah Laporan</a>
 
         </div>
         <table class="table">
@@ -104,7 +106,6 @@ if (!isset($_SESSION['username'])) {
                 ?>
             </tbody>
         </table>
-        <a href="add.php" class="btn btn-success">Tambah Laporan</a>
     </div>
 
 </body>
