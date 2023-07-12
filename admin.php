@@ -1,15 +1,3 @@
-<?php
-session_start();
-
-// Cek apakah pengguna sudah login
-if (!isset($_SESSION['username'])) {
-    // Redirect ke halaman login jika pengguna belum login
-    header("Location: login.php");
-    exit();
-}
-?>
-
-
 <!DOCTYPE html>
 <html>
 
@@ -18,8 +6,8 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
-            background-color: #131315;
-            /* Ganti dengan warna latar belakang yang Anda inginkan */
+            background-color: #ffffff;
+            /* Ubah menjadi putih */
         }
 
         .table-container {
@@ -53,6 +41,10 @@ if (!isset($_SESSION['username'])) {
         .add-report-btn {
             margin-top: 10px;
         }
+
+        .registration-btn {
+            margin-top: 10px;
+        }
     </style>
 </head>
 
@@ -69,6 +61,7 @@ if (!isset($_SESSION['username'])) {
             </form>
             <a href="add.php" class="btn btn-success add-report-btn">Tambah Laporan</a>
             <a href="logout.php" class="btn btn-danger logout-btn">Logout</a>
+            <a href="proses_registrasi.php" class="btn btn-info registration-btn">Proses Registrasi</a>
         </div>
 
         <div class="table-container">
@@ -124,7 +117,6 @@ if (!isset($_SESSION['username'])) {
             </table>
         </div>
     </div>
-
 </body>
 
 </html>

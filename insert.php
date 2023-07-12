@@ -26,7 +26,7 @@ $query = "INSERT INTO laporan_perjalanan (gambar, nama, tanggal, alamat_awal, al
 $result = mysqli_query($conn, $query);
 
 // Mengalihkan kembali ke halaman utama setelah data ditambahkan
-header("Location: index.php");
+header("Location: user.php");
 exit();
 
 // Tutup koneksi ke database

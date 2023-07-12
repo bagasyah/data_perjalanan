@@ -17,14 +17,23 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($conn, $query);
 
     if (mysqli_num_rows($result) == 1) {
-        // Login berhasil, simpan informasi pengguna dalam session
-        $_SESSION['username'] = $username;
+        $user = mysqli_fetch_assoc($result);
+        if ($user['status'] == 0) {
+            echo "<script>alert('Akun Anda masih diproses oleh admin. Silakan ditunggu balasan dari admin.');</script>";
+        } else {
+            // Login berhasil, simpan informasi pengguna dalam session
+            $_SESSION['username'] = $username;
 
-        // Redirect ke halaman utama setelah login berhasil
-        header("Location: index.php");
-        exit();
+            // Redirect ke halaman sesuai peran pengguna setelah login berhasil
+            if ($user['role'] == 'admin') {
+                header("Location: admin.php");
+            } else {
+                header("Location: user.php");
+            }
+            exit();
+        }
     } else {
-        echo "Username atau password salah.";
+        echo "<script>alert('Username atau password salah.');</script>";
     }
 }
 
@@ -56,7 +65,8 @@ mysqli_close($conn);
 
             </div>
             <div class="user-box">
-                <input type="password" class="form-control" name="password" id="password" style="color: white;" required>
+                <input type="password" class="form-control" name="password" id="password" style="color: white;"
+                    required>
                 <label for="password">Password</label>
             </div>
 
